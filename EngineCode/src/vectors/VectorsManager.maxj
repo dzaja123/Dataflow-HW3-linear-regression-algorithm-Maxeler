@@ -1,0 +1,28 @@
+/**
+ * Document: MaxCompiler Tutorial (maxcompiler-tutorial.pdf)
+ * Chapter: 6      Example: 3      Name: Vectors
+ * MaxFile name: Vectors
+ * Summary:
+ *        Manager for kernel that doubles values in a vector.
+ */
+package vectors;
+
+import com.maxeler.maxcompiler.v2.build.EngineParameters;
+import com.maxeler.maxcompiler.v2.kernelcompiler.Kernel;
+import com.maxeler.maxcompiler.v2.managers.standard.Manager;
+import com.maxeler.maxcompiler.v2.managers.standard.Manager.IOType;
+
+class VectorsManager {
+	private static int vectorSize = 2;
+	public static void main(String[] args) {
+		EngineParameters params = new EngineParameters(args);
+		Manager manager = new Manager(params);
+		Kernel kernel = new VectorsKernel(manager.makeKernelParameters(), vectorSize);
+		manager.setKernel(kernel);
+		manager.setIO(IOType.ALL_CPU);
+		manager.addMaxFileConstant("vectorSize", vectorSize);
+		manager.createSLiCinterface();
+		manager.build();
+	}
+
+}
