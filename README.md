@@ -63,5 +63,22 @@ Here's a breakdown of the key components:
 - A loop iterates over each element of the input vectors, and scalar multiplication is performed element-wise. The results are accumulated in the output variable, effectively computing the dot product of the two vectors.
 - Finally, the computed result is declared as an output port named 'output' with its associated type.
 
+## Execution Graph for a Mathematical Function
+This section provides an overview of the execution graph for a scalar multiplication within the MaxCompiler application.
+
+### Execution Graph Overview
+The execution graph for the scalar multiplication is represented as a series of interconnected nodes and edges, illustrating the flow of computation on the Maxeler platform. 
+This graph encapsulates the pipeline of arithmetic units and the orchestrated data flow managed by the MaxCompiler.
+
+### Graph Visualization
+![Graph1](Graphs/Vectors-VectorsKernel-original.png)
+
+![Graph2](Graphs/Vectors-VectorsKernel-final-simulation.png)
+
+### Clone the repository to your local machine.
+```bash
+git clone https://github.com/dzaja123/Dataflow-HW2-linear-regression-algorithm-Maxeler.git
+```
+
 ## Conclusion
 In summary, scalar multiplication is a critical component in the implementation of linear regression, particularly during the optimization process using gradient descent. The careful integration of scalar multiplication, along with an appropriate learning rate, ensures the convergence of the algorithm and the generation of optimal coefficients for an accurate predictive model. A solid understanding of the mathematical foundations and practical implementation of scalar multiplication in linear regression is crucial for any data scientist or machine learning practitioner.
