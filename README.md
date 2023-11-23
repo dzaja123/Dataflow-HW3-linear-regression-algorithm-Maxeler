@@ -22,7 +22,7 @@ Here, $`m`$ is the number of training examples, $`(h(x^{(i)}))`$ is the predicte
 ## Incorporating Scalar Multiplication
 Scalar multiplication is integrated into the gradient descent update rule to determine the step size for adjusting each coefficient during the optimization process. The term $`(\alpha \frac{\partial J}{\partial \beta_i})`$ governs the magnitude of the update, influencing the adjustment of each coefficient in a given iteration.
 
-## Scalar Multiplication Implementation in Maxeller
+## Scalar Multiplication in Maxeller
 The VectorsKernel class extends the Maxeler Kernel class and is designed to optimize linear regression operations. 
 ```java
 package vectors;
@@ -63,7 +63,7 @@ Here's a breakdown of the key components:
 - A loop iterates over each element of the input vectors, and scalar multiplication is performed element-wise. The results are accumulated in the output variable, effectively computing the dot product of the two vectors.
 - Finally, the computed result is declared as an output port named 'output' with its associated type.
 
-## Execution Graph for a Mathematical Function
+## Execution Graph for a Scalar Multiplication
 This section provides an overview of the execution graph for a scalar multiplication within the MaxCompiler application.
 
 ### Execution Graph Overview
